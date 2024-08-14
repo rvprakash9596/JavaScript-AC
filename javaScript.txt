@@ -1,0 +1,1396 @@
+                        JavaScript ApnaCollege (03-August-2024)
+                        =======================================
+
+
+What is JavaScript :
+--------------------
+JS is a Programming Language . We use it to give instructions to the computer.
+JS is a Dynamically Typed Programming Language.
+Dynamically Typed means we don't need to define the type of data .
+
+Input(code)---> Computer ---> Output
+
+Setting up VS Code </>
+------------------
+It is a free & popular code editor by Microsoft.
+
+VS Code Installation :
+----------------------
+Installation Completed..
+
+Chapter 1: Variables And DataTypes
+=================================================================================================
+
+Our 1st JS Code
+---------------
+Console.log is used to log(print) a message to the console.
+
+console.log("Ravi Prakash");
+Explanation
+-----------
+console k upar log(print) kr do..
+
+JS Extension:
+-------------
+fileName.js
+
+                                    Variables in JS :
+=================================================================================================
+Variables are like as a containers that holds/stores data/values.
+Variables are containers for data.
+Variables are temporary memory locations.
+
+
+Variable Rules :
+----------------
+.Variable names are case sensitive; "a" & "A" is different.
+.Only letters , digits, underscore(_) and $ symbol is allowed.(not even space)
+.Only a letter , underscore or $ should be 1st character.
+.Reserve words cannot be Variable names.
+
+Examples:
+=========
+fullname="Ravi Prakash";
+FULLNAME="Saurabh Kumar";
+
+console.log(fullname);
+console.log(FULLNAME);
+
+
+_fullname="Ravi";
+console.log(_fullname);
+
+$fname="Ravi Prakash";
+console.log($fname);
+
+12Fullname="abd"; //Invalid Conventions
+console="Ravi";//Invalid Conventions because this is a reserve words(Keywords).
+
+Conventions :
+-------------
+fullName => camelCase
+fullname
+full_name
+full_Name
+FullName 
+totalPrice
+isFollow
+
+let,const & var :
+=================
+
+var: Variable can be re-declared & updated. A global scope Variable.
+----                                          ----------------------
+Example:
+var age=24;
+var age=87;
+var age=21;
+age=21+2;
+console.log(age);// output will be 23
+
+
+let: Variable cannot be re-declared but can be updated. A block scope variable.
+----                                                      --------------------
+Example:
+--------
+let age=21;
+age=24;
+age=30;
+console.log(age);//30
+
+const: Variable cannot be re-declared or updated . A block scope Variable.
+------                                               --------------------
+Example
+-------
+ const age=21;
+ age=27; // we can't use by this
+ console.log(age);//21
+
+
+Note: var is old model practice. var is not good practice for declaring a variable.
+-----------------------------------------------------------------------------------
+
+Block Scope Means :
+-------------------
+{
+    let a=5;
+    console.log(a);//valid
+}
+{
+    let a=12;
+    console.log(a);//valid
+}
+
+                                        Data Types in JS :
+=================================================================================================
+Number , String , Boolean , Undefined , Null , BigInt , Symbol
+
+1. Primitive DataTypes(7) :Number , String , Boolean , Undefined , Null , BigInt , Symbol
+2. Non-Primitive DataTypes:(Object)
+
+
+Objects : It is a collection of values.
+---------
+Example: Student's Data
+name
+age
+rollNo
+Marks
+isPass
+
+Objects stores key-value pairs :
+--------------------------------
+Syntax:
+-------
+key:value
+
+Ex: name:Ravi
+    age:21
+    rollNo:2204220109027
+
+
+====================================================================================================
+                            Chapter - 2 Operators And Conditional Statements
+====================================================================================================
+
+Comments in JS
+==============
+. Comments are used to describe about a code that what will that perticular code do. 
+. Parts of the code which is not executed.
+. Comments are two types.
+
+1.Single Line Comments
+2.Multi-Line Comments
+
+//This is a single line comments in JS
+/* This is multiline comments in JS */
+
+
+                                    Operators and Conditional Statements in JS :
+=======================================================================================================================
+
+Used to perform some operation on Data.
+
+1.Arithmetic Operators
+
++,-,*,/
+.Modulus
+.Exponentiation
+.Increment
+.Decrement
+
+Ex. a+b
+
+a,b are operands.
++ is a operator.
+
+// Arithmetic Operators
+let a=5;
+let b=2;
+console.log("a =",a,"\nb =",b);
+// console.log(a+b);
+console.log(" a + b = ",a+b);
+console.log(" a - b = ",a-b);
+console.log(" a * b = ",a*b);
+console.log(" a / b = ",a/b);
+console.log(" a % b = ",a%b);
+console.log(" a ** b = ",a**b);//Exponentiation
+
+Unary Operator : works on single operands.
+---------------
+console.log(++a);//pre-increment operator
+console.log(a++);//post-increment operator
+console.log(a);
+
+console.log(a--); //post-decrement
+console.log(--a); //pre-decrement
+console.log(a);
+
+Assignment Operator :
+---------------------
+=   +=   -=   *=   %=   **=
+
+Ex.
+a+=1 ==> a=a+1
+a+=4 ==> a+4
+
+
+let a=5;
+let b=2;
+// a+=4;
+// a*=4;
+// a/=4;
+// a%=4;
+a**=4;
+console.log(a);
+
+
+Comparison Operator :
+---------------------
+Equal to ==
+Equal to & type ===
+Not Equal to !=
+Not Equal to & type !==
+Less That <
+Greater Than >
+Less that equal to <=
+Greater Than Equal to >=
+
+
+ let a=5;
+let b=2;
+// console.log(a==b); // false
+// console.log(a!=b); // true
+// console.log(a<b); // false
+// console.log(a>b); // true
+// console.log(a>=b);//true
+// console.log(a<=b);//false
+
+
+// let b=10;
+// let c="10";
+// console.log(b==c);//true
+
+let d=5;;
+let e="5";
+console.log(d==e);//true
+console.log(d===e);//false
+console.log(d!==e);//true
+
+
+Logical operators :
+-------------------
+Logical AND   &&
+Logical OR    ||
+Logical NOT   !
+
+Conditional Statement :
+-----------------------
+. To implement some condition in the code.
+1. if Statement
+2. if-else Statement
+3. else-if Statement
+
+if Statement
+------------
+if(condition)
+{
+    //statements
+}
+
+if-else Statement
+-----------------
+if(condition)
+{
+    //statements
+}
+else{
+    //condition
+}
+
+else-if Statement
+-----------------
+Syntax:
+------
+if(condition)
+{
+    // code
+}
+else if(condition)
+{
+    // code
+}
+else if(condition)
+{
+    // code
+}
+else{
+    // code
+}
+
+Example:
+---------
+let mode="blue";
+let color;
+
+if(mode==="dark")
+{
+    color="black";
+}
+else if(mode==="blue")
+{
+    color="red";
+}
+else if(mode==="pink")
+{
+    color="green";
+}
+else{
+    color="white";
+}
+console.log(color);
+
+
+
+Ternary Operator: It is a way to write if else statement in single line. 
+-----------------
+condition ? true output : false output
+age>18 ? "adult" : "not adult" ;
+
+Example:
+let age=25;
+let res= age>18? "You are eligible for Vote" : "You are not eligible for Vote";
+console.log(res);
+
+
+MDN Docs
+---------
+
+switch Statement
+----------------
+
+let fruit="Grapes";
+switch(fruit)
+{
+    case "Papaya":
+        console.log("This is a papaya");
+        break;
+    case "Mango":
+        console.log("This is a Mango");
+        break;
+    default:
+        console.log(`Sorry! , we don't have found your ${fruit}.`);
+}
+
+
+// let's Practice
+==================================================================
+
+// alert("Hello Bhai "); // Creates one time pop-up
+
+/*let name=prompt("Hello");
+console.log(name);*/
+// prompt("kaise ho"); // Takes input
+
+/*Q1. Get user to input a number using prompt("Enter a number : "). Check if the number is a multiple of 5 or not.
+let num=prompt("Enter a number : ");
+if(num%5===0)
+{
+    console.log(num ," is Multiple of 5");
+}
+else
+{
+    console.log(num ,"is not multiple of 5");
+}
+*/
+
+
+/*Q2. Write a code which can give grade to students according to their scores.
+90-100 A
+70-89 B
+60-69 C 
+50-59 D 
+0-49 F*/
+
+let score=prompt("Enter your score : ");
+// let score=95;
+let grade;
+if(score>=90 && score<=100)
+{
+    grade="A";
+}
+else if(score>=70 && score<=89)
+{
+    grade="B"
+}
+else if(score>=60 && score<=69)
+{
+    grade="C";
+}
+else if(score>=50 && score<=59)
+{
+    grade="D";
+}
+else if(score>=0 && score<=49)
+{
+    grade="F";
+}
+// else{
+//     grade="F"
+// }
+console.log("According to your scores , Your grade is : ",grade);
+
+
+
+========================================================================================================================
+                                           Chapter - 3  Loops & Strings
+========================================================================================================================
+
+Loops in JavaScript : Loops are used to execute a piece of code again and again.
+---------------------
+
+1. for Loop
+2. while Loop
+3. do-while Loop
+4. for-of Loop
+
+For Loop :
+==========
+for(initialization; condition; updation)
+{
+    //statements
+}
+
+/*
+console.log("Ravi Prakash");
+console.log("Ravi Prakash");
+console.log("Ravi Prakash");
+console.log("Ravi Prakash");
+console.log("Ravi Prakash");
+*/
+
+// for loop
+
+/*
+let count;
+for(count=1; count<=10; count++)
+{
+    console.log("Ravi Prakash"); 
+}
+*/
+
+
+/*
+let i;
+for(i=1; i<=5; i++)
+{
+    console.log("i = ",i); 
+}
+*/
+
+
+// To calculate sum of 1 to 5
+/*
+let sum=0;
+for(let i=1; i<=5; i++)
+{
+    sum=sum+i;
+}
+console.log("Sum = ",sum);
+console.log("Loop has ended..");
+*/
+
+
+// To calculate sum of 1 to n
+/*
+let sum=0;
+let n=50;
+for(let i=1; i<=n; i++)
+{
+    sum=sum+i;
+}
+console.log("Sum = ",sum);
+console.log("Loop has ended..");
+*/
+
+
+
+Infinite Loop: A loop that never ends..
+--------------
+
+
+// Infinite Loops :  Infinite Loop hme kbhi nhi krna hai apne program me.
+
+for(let i=1; i>=0; i++)
+{
+    console.log("i =",i);
+}
+
+
+While Loop :
+=============
+initialization;
+while(condition)
+{
+    // do some work;
+    // updation;
+}
+
+/*
+let i=1;
+while(i<=5)
+{
+    console.log("i =",i);
+    i++;
+}
+*/
+
+
+/*
+let i=1;
+while(i<=10)
+{
+    console.log("Ravi Prakash");
+    i++;
+}
+*/
+
+
+// Do while loop
+==================
+
+initialization;
+do{
+    // code;
+    //updation;
+}
+while(condition);
+
+
+Example:
+-------------------
+let i=10;
+do{
+    console.log("Ravi Prakash");
+    i++;
+}
+while(i<=10);
+
+
+let i=1;
+do{
+    console.log("i = ",i);
+    i++;
+}
+while(i<=10);
+
+for-of Loop : It works on Character of Strings.
+=============
+
+// for-of loop : it works on character of string .
+// for-in loop : Used for apply loop on Objects.
+
+for(let val of strVar)
+{
+    // do some work;
+}
+
+for(let val in Object_name)
+{
+    //do some work;
+}
+
+Example :
+==========
+
+/*
+let str="Ravi Prakash";
+for(let i of str)
+{
+    console.log("i = " ,i);
+}
+*/
+
+/*
+let str="Ravi Prakash";
+let  size=0;
+for(let i of str)
+{
+    console.log("i = " ,i);
+    size ++;
+}
+console.log("Size of Str = ",size);
+*/
+
+
+// for-in loop : Used for apply loop on Objects.
+let student={
+    Name:"Ravi Prakash",
+    Branch:"CSE",
+    Age:21,
+    CGPA:8.55,
+    isPass:true
+};
+console.log(student);
+for(let i in student)
+{
+    // console.log("Keys = ",i,"Values = ",student[i]);//returns only keys
+    console.log("key =",i);
+}
+
+                                    Let's Practice :
+==============================================================================================
+Q1. Print all even numbers from 0 to 100.
+/*
+for(let i=0; i<=100; i++)
+{
+    if(i%2==0)// for even number
+   // if(i%2!==0)// for odd number
+
+    {
+        console.log("Even Number =",i);
+    }
+}
+*/
+
+//Q2. Create a game where you start with any random game number . Ask the user to keep guessing the game number until the user enters correct value.
+
+/*
+let gameNumber = 21;
+let userNumber = prompt("Guess the Game Number : ");
+while(userNumber != gameNumber)
+{
+    userNumber = prompt("You Entered wrong number . Guess Again! : ");
+}
+console.log("Congratulations! , you entered the right number ...");
+
+*/
+
+
+                                Strings in JavaScript
+                               =======================
+// Strings are immutable in JavaScript.
+
+Strings : Strings is a Sequence of Characters which are used to represent the Text.
+
+Creating Strings :
+------------------
+let str = "Ravi Prakash";
+        OR
+let str1='Ravi Prakash';
+
+String Length :
+---------------
+str.length;
+
+String Indices:
+---------------
+str[0],str[1],str[2];
+
+
+
+
+/*
+let str1="Ravi Prakash";
+let str2="Saurabh";
+console.log(str1);
+console.log("Length of ",str1," = ",str1.length);
+console.log(str2);
+console.log("Length of ",str2," = ",str2.length);
+
+
+// access using index of string
+console.log(str1[0]);
+console.log(str1[1]);
+console.log(str1[2]);
+console.log(str1[3]);
+*/
+
+let obj={
+    item:"Pen",
+    price:10
+};
+console.log("The price of ",obj.item,"is",obj.price,"Rs.");
+
+//              OR  using template literals
+
+let output = `The cost of ${obj.item} is ${obj.price} Rupees`;
+console.log(output);
+
+// Template Literals
+let sentence=`This is a template Literals`;
+console.log(sentence);
+console.log(typeof(sentence));
+
+
+Template Literals in JavaScript : A way to have embedded expressions in String.
+----------------------------------
+`This is a Template Literals`;
+
+`` : This is called backtick;
+
+String Interpolation : To create Strings by doing substitutions of placeholders.
+----------------------
+
+`string text ${expressions} string text`;
+
+
+// Escape Characters:
+---------------------
+\n : next line
+\t : a tab sapce 
+
+String Methhods in JavaScript :
+-------------------------------
+There are built-in functions to manipulate a string.
+
+.str.toUpperCase()
+.str.toLoverCase()
+.str.trim() // removes whitespace
+.str.slice(start,end?)//returns part of string
+.str1.concat(str2) //joins str2 with str1
+.str.replace(searchVal,newVal)
+.str.charAt(idx)
+*/
+
+/*
+let str="ravi prakash bansal iet lko";
+
+console.log(str.toUpperCase());
+
+console.log(str.toLowerCase());
+
+console.log(str);
+
+console.log(str.trim()); // removes whitespaces from begining and last
+
+let str1 = "Ravi Prakash";
+console.log(str1.slice(2,7));
+
+let str2="Saurabh Kumar";
+console.log(str2.concat(str1));
+
+console.log(str1.replace("Ravi","Sonu"));
+
+console.log(str1.charAt(5));
+*/
+
+
+Let's Practice :
+===============================
+Q1. Prompt the user to enter their full name. Generate a username for them based on the input . Starts username with @, followed by their full name and ending with the full name length.
+
+eg. user name="raviprakash",username should be "@raviprakash11"
+
+Example:
+---------
+let fullname=prompt("Enter Your Full Name Without Space :");
+let username="@"+fullname+fullname.length;
+console.log(username);
+
+
+=====================================================================================================
+                                Chapter - 4  Arrays in JavaScript
+=====================================================================================================
+
+
+
+//                                      Arrays in JavaScript
+
+
+// Arrays is a collection of objects.
+
+// Create Array :
+// --------------
+// let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+// let marks=[98,82,78,86,81];
+// let info=["Ravi Prakash",86,"KLD"];
+
+// using variables 
+/*
+console.log("JavaScript Arrays");
+
+let marks_student1=98;
+console.log(marks_student1);
+let marks_student2=91;
+console.log(marks_student2);
+let marks_student3=90;
+console.log(marks_student3);
+let marks_student4=97;
+console.log(marks_student4);
+let marks_student5=99;
+console.log(marks_student5);
+*/
+
+//using JS objects
+/*
+let marks={
+    stu1:98,
+    stu2:96,
+    stu3:87,
+    stu4:88,
+    stu5:75,
+};
+console.log("Printing using JS Object");
+console.log(marks);
+*/
+
+                                        //using Arrays
+                                        //---------------
+//Index matters In Arrays
+//Arrays is a tyep of object. 
+// in array we use indeces at the place of Object keys
+
+let marks=[97,82,56,84,88];
+console.log(marks);
+console.log("Length of arrays =",marks.length);
+console.log("Type of Marks :",typeof(marks));
+
+
+let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+console.log(heros);
+console.log("Length of arrays =",heros.length);
+console.log("Type of heros :",typeof(heros));
+
+
+Array Indices  :
+----------------
+arr[0],arr[1],arr[2],.....
+
+/*
+let marks=[97,82,56,84,88];
+marks[2]=94.5;
+// console.log(marks);
+console.log(marks[0]);
+console.log(marks[1]);
+console.log(marks[2]);
+console.log(marks[3]);
+console.log(marks[4]);
+console.log(marks[5]);//undefined
+console.log(marks[10]); //undefined
+
+
+//Changing marks value at any index
+marks[3]=95.5;
+console.log(marks[3]);
+*/
+
+
+//In JS Arrays are Mutable
+---------------------------
+*Particular Index pr jaa kr hm apni index ki value change kr sakte hain.
+
+
+//In JS Strings are Immutable
+------------------------------
+*Particular Index pr hm apni index ki value ko directly change nhi kr sakte.
+
+
+Looping Over an Array :
+------------------------
+Print all elements of an Array.
+
+/*
+let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+console.log(heros[0]);
+console.log(heros[1]);
+console.log(heros[2]);
+console.log(heros[3]);
+console.log(heros[4]); // undefined
+*/
+
+// iterable using for loop
+/*
+let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+for(let idx=0; idx<heros.length; idx++)
+{
+    console.log(heros[idx]);
+}
+
+
+
+// for-of loop : it works on character of string .
+// for-in loop : Used for apply loop on Objects.
+
+// iterable using for of loop
+console.log("iterable using for of loop");
+for(let i of heros)
+{
+    console.log(i);
+}
+
+
+let cities=["Delhi","Pune","Mumbai","Hyderabad"];
+for (let city of cities)
+{
+    // console.log(city);
+    console.log(city.toUpperCase());
+}
+*/
+
+
+
+//                                  Practice Questions
+//                          =================================
+
+//Q1. For a given array with marks of students [85,97,44,37,76,60] , find average marks of the entire class.
+/*
+let marks=[85,97,44,37,76,60];
+let sum=0;
+for(let value of marks)
+{
+    console.log("Marks :",value);
+    sum+=value;
+}
+console.log("Sum of total marks =",sum);
+let avg=sum/marks.length;
+// console.log("The average marks is =",avg);
+console.log(`Average marks of the class = ${avg}`);
+*/
+
+//Q2.For a given array with prices of 5 items [250,645,300,900,50] . All items have an offer of 10% OFF on them . Change the array to store final price after applying offer.
+
+//using for of loop
+/*
+let items=[250,645,300,900,50];
+let i=0;
+for(let value of items)
+{
+    // console.log(`Value at index ${i} = ${value}`);
+    let offer=value/10;
+    items[i]=items[i]-offer;
+    console.log(`Value after Offer with 10% =${items[i]}`);
+    i++;
+}
+*/
+
+//using for loop
+/*
+let items=[250,645,300,900,50];
+console.log("Items are :",items);
+
+for(let i=0; i<items.length; i++)
+{
+    let offer=items[i]/10;
+    items[i] -= offer;
+}
+console.log("After applying 10% Off on Items :",items);
+*/
+
+                                       Array Methods
+                                ==========================
+
+
+//Note : method name always starts from small letters.
+
+//push() : add to end
+//pop()  : delete from end & return 
+//toString() : converts array to String
+//toString() :It returns a new array
+//concat() : joins multiple arrays and returns the new result.
+//unshift(): add elements or array at the start.Works like push().
+//shift(): Delets an element at the start . Works like pop().
+//slice(): returns a piece of the array
+//splice(): change original array (add,remove,replace).
+
+
+let foodItems=["Apple","Orange","Grapes","Banana"];
+console.log(foodItems);
+
+
+//push()
+foodItems.push("Guavava");
+console.log(foodItems);//adds guavava at end
+
+foodItems.push("Chips","Burger","Cheese"); // adds these elements at the end
+console.log(foodItems); 
+
+//pop()
+let deleteditems=foodItems.pop(); // delete last element cheese
+
+console.log(deleteditems," Has Deleted ");
+console.log(foodItems);
+
+//toString()
+console.log(foodItems.toString());// It returns a new array
+console.log(foodItems);
+
+let mar=[97,82,56,84,88];
+console.log(mar);
+mar.toString();
+console.log(mar);
+
+//concat()
+let color1=["Red","Teal","Green","Warning"];
+let color2=["Pink","Chill","Kro","Guys"];
+
+let res=color1.concat(color2);//it doesn't change the original Array
+console.log(res);
+console.log(color1);
+console.log(color2);
+
+//unshift()
+let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+console.log(heros);
+heros.unshift("Ravi Prakash");// adds element at the start of index.
+console.log(heros);
+
+let val = heros.shift();
+console.log(val,"is deleted now");// deletes element at the start of index
+console.log(heros);
+
+
+
+//slice()
+let heros=["Ritik roshan","Rajnikant","Bacchan Ji","Charan Kumar"];
+console.log(heros);
+console.log(heros.slice(2)); // sometimes we use slice() to copy of array
+console.log(heros);
+
+
+//splice():it takes three parameter
+// splice(startIdx,delCount,newEl1....)
+//Ex: [45,12,41,22,57,87,62,20]
+//splice(2,2,100,200);
+//finally res = [45,12,100,200,57,87,62,20]
+
+let ele=[45,12,41,22,57,87,62,20];
+console.log(ele);
+ele.splice(2,2,100,200);
+console.log(ele); //res = [45,12,100,200,57,87,62,20]
+
+//Add Element
+ele.splice(1,0,277);
+console.log(ele);//[45, 277, 12, 100, 200, 57, 87, 62, 20]
+
+//Delete Element
+ele.splice(3,1);
+console.log(ele); //[45, 277, 12, 200, 57, 87, 62, 20]
+
+//Replace Element
+ele.splice(3,1,111);
+console.log(ele);//[45, 277, 12, 111, 57, 87, 62, 20]
+
+ele.splice(4);
+console.log(ele);//[45, 277, 12, 111]
+
+
+//                                  Practice Questions
+//                          =================================
+
+// Q1. create an array to store companies :- "Bloomberg","Microsoft","Uber","Google","IBM","Netflix".
+let companies = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+console.log(companies);
+
+// Q2. remove the first company
+companies.shift();
+console.log(companies);//['Microsoft', 'Uber', 'Google', 'IBM', 'Netflix']
+
+// Q3. remove Uber & add Ola in it's place.
+companies.splice(1,1,"Ola");
+console.log(companies);//['Microsoft', 'Ola', 'Google', 'IBM', 'Netflix']
+
+// Q4. Add Amazon at the end 
+companies.push("Amazon");
+console.log(companies);
+
+
+====================================================================================================
+                            Chapter - 5 Functions And Methods
+====================================================================================================
+
+                                            Functions In JavaScript
+                                    ======================================
+.Functions is a block of code that performs a specific task,can be invoked whenever needed.
+.Functions saves code redundency(repeatation).
+.There are two types of function.
+    a)Pre-Defined Function
+    b)User-Defined Functions
+    
+
+User-Defined Functions
+=======================
+
+Creating Function:
+------------------
+
+1.Function definition
+======================
+
+function functionName()
+{
+    //do some work
+}
+
+2.Function Calling / Invoke
+===========================
+
+functionName();
+
+
+Syntax:
+========
+function functionName(param1,param2,....)
+{
+    //do some work
+}
+functionName() //function calling
+
+
+//Method 1
+/*
+function demo()
+{
+    console.log("Hello Friends!");
+    console.log("Kaise Ho Saare");
+}
+demo();
+demo();
+
+
+//Method 2
+function demo2(msg)// parameter ==> Input
+{
+    console.log(msg);
+}
+demo2("I Love JavaScript !!!"); //argument  ==>value
+
+
+//Method 3
+function myFunction(msg1,n)// parameter ==> Input
+{
+    console.log(msg1,n);
+}
+myFunction("I Love Database !!!",2051); //argument  ==>value
+*/
+
+//Method 4
+/*
+function sum(x,y)
+{
+    console.log(x+y);
+}
+*/
+
+//Method 5
+/*
+function sum(x,y)
+{
+    res=x+y;
+    return res;
+}
+*/
+
+
+//Method 6
+/*
+function sum(x,y)
+{
+    //local variable ==> scope till here
+    res=x+y;
+    console.log("Before return");
+    console.log(x);
+    return res;
+    console.log("After return");//This statement will never be executed.
+}
+let val=sum(5,8);
+// console.log(x);
+console.log("Sum =",val);
+*/
+//Note: x,y are local variable . Their scope is block scope of functions.
+
+
+
+                                Arrow Functions
+                            =======================
+.Compact way of writing a functions.
+
+Syntax:
+-------
+
+const functionName=(param1,param2,...)=>{
+    //do-somw work
+}
+
+Example :
+----------
+const sum=(a,b)=>
+{
+    return a+b;
+}
+
+//sum functions
+function sum(a,b){
+    return a+b;
+}
+
+//moder JS
+const arrowSum=(a,b)=>{
+    console.log("Sum =",a+b);
+};
+
+const mul=(a,b)=>{
+    console.log(a*b);
+    // return a*b; //we can do this also
+};
+
+
+const printHello=()=>{
+    console.log("Hello");
+};
+*/
+
+//                                          Let's Practice
+//                              =====================================
+
+//Q1. create a function using the "function" keyword that takes a String as an argument & returns the number of vowels in the String.
+//Ex:: Hello
+// vowels=4
+
+/*
+function countVowels(str)
+{
+    //"Ravi Prakash";
+    let count=0;
+    for(const char of str){
+        if(
+            char==="a" ||
+            char==="e" ||
+            char==="i" ||
+            char==="o" ||
+            char==="u"
+        ) {
+            count++;
+        }
+    }
+    // console.log(count);
+    return count;
+}
+*/
+
+
+//Q2. Create an arrow function to perform the same task.
+/*
+const countVow=(str)=>{
+    let count=0;
+    for(const char of str)
+    {
+        if(
+            char === "a"||
+            char ==="e"||
+            char==="i"||
+            char==="o"||
+            char==="u"
+        ){
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
+                                forEach Loop in Arrays
+                            =============================
+arr.forEach(callBackFunction)
+
+.CallbackFunction: Here,it is a function to execute for each element in the Array.
+.A callback is a function which is passed as an argument to another function.
+
+arr.forEach((Val)=>{
+    console.log(val);
+})
+
+---------------------------------
+Higher Order Function / Methods :
+---------------------------------
+Higer order functions / methods are those functions which takes another functions as a parameters or returns another function.
+
+Ex: forEach is a Higher Order Function
+
+                                Lets Practice
+                            =====================
+Q1. For a given array of numbers , print the square of each value using forEach loop.
+
+//Method 1
+
+let arr=[1,2,3,4,5];
+arr.forEach((arr)=>{
+    console.log(arr*arr);
+})
+
+
+
+//Method 2
+
+let nums = [22,33,10];
+let calcSquare = (nums) =>{
+    console.log(nums*nums);
+};
+nums.forEach(calcSquare);
+
+
+
+
+                                    Some More Array Methods
+                                  -------------------------------
+1. map():creates a new array with the results of some operation.The value it's callback returns are used to form a new array.
+
+arr.map(callbackFnx(value,index,array))
+
+
+let newArr=arr.map((val)=>{
+    return val*2;
+})
+
+
+let num = [5,10,15,20];
+let newArr = num.map((val)=>{
+    return val*2;
+});
+console.log(newArr);
+
+
+2. filter():Creates a new array of elements that give true for a condition/filter.
+
+Eg: all even elements.
+
+let newArr=arr.filter((val)=>{
+    return val%2===0;
+})
+
+let arr = [5,10,15,20];
+let evenArr = arr.filter((val)=>{
+    return val%2===0; //even
+    return val%2!==0; //odd
+});
+console.log(evenArr);
+
+3. reduce() : Performs some operations & reduces the array to a single value. It returns that single value.
+
+/*
+let arr = [1,2,3,4];
+const output = arr.reduce((prev,curr)=>{
+    return prev+curr;
+})
+console.log(output);
+*/
+/*
+let arr = [5,6,2,1,67,3];
+const output = arr.reduce((prev,curr)=>{
+    return prev>curr ? prev : curr;
+})
+console.log(output);
+*/
+
+
+//                                        Let's Practice 
+//                                    ----------------------
+
+//Q1. We have given array of mark's of students . Filter out marks of student that scored 90.
+/*
+let marks=[87,93,68,92,88,87];
+let toppers = marks.filter((val)=>{
+    return val>90;
+})
+console.log(toppers);
+*/
+
+Take a number n as input form user . Create an array of numbers from 1 to n.Use the reduce method to calculate sum of all numbers in the array.Use the reduce method to calculate product of all numbers in the array.
+
+let n = prompt("Enter a number : ");
+let arr = [];//n=5
+for(let i=1; i<=n; i++){
+    arr[i-1]=i; // 1(0),2(1),3(2),4(3).....
+}
+console.log(arr);
+
+let sum=arr.reduce((res,curr)=>{
+    return res+curr;
+});
+console.log("The sum = ",sum);
+
+let factorial=arr.reduce((res,curr)=>{
+    return res*curr;
+});
+console.log("Factorial = ",factorial);
