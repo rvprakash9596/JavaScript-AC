@@ -103,6 +103,7 @@ divs[2].innerText="New Value3";
 
 
 
+
 //Method 2
 let divs = document.querySelectorAll(".box");
 let idx =1;
