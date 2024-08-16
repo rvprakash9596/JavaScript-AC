@@ -1,0 +1,260 @@
+                                JavaScript Document Object Model (DOM)
+                            ==============================================
+
+                                        DOM Part 1
+==============================================================================================
+
+The 3 Musketeers of Web Dev :
+-----------------------------
+
+1=> HTML (Structure)
+2=> CSS  (Style)
+3=> JS   (Logic)
+
+
+Starter Code :
+--------------
+<style>  : connects HTML with CSS
+<script> : connects HTML with JavaScript
+
+
+Window Object :
+----------------
+The window object represents an open window in a web browser . It is browser's object ( not JavaScript's ) & is automatically created by browser.
+
+It is a global object with lots of properties & methods.
+
+console.log("Hello1");
+window.console.log("Hello2");
+window.alert("Hii");
+
+                                    -----------------
+                                      What is DOM ??
+                                    -----------------
+When a web page is loaded , the browser creates a DOCUMNET OBJECT MODEL (DOM) of the Page.
+
+----------------------------------------------------------------------------------------------
+                                        window
+                                          |
+                                          |
+                                       document
+                                          |
+                                          |
+                                         html
+                                          |
+                                          |
+                            ---------------------------------
+                            |                               |
+                            |                               |
+                            |                               |
+                          head                             body
+                            |                               |
+                            |                               |
+        -------------------------------             --------------------------
+        |        |          |          |            |                         |
+    meta      meta       title       link         script                     div
+                                                                              |
+                                                            -------------------------------
+                                                            |        |         |          |
+                                                           img       h1        p         div
+----------------------------------------------------------------------------------------------
+
+                
+                
+                html -------->JS--------->object----------->document
+
+
+alert("Hello");
+alert("Ravi Prakash");
+
+
+Window Object
+
+console.log("Hello1");
+window.console.log("Hello2");
+window.alert("Hii");
+
+
+
+                                          DOM
+
+ Touching HTML Code Through JavaScript is called DOM.
+ document.body.style.background="teal";  changing background at runtime in console
+ document.body.style.color="green";
+ document.body.childNodes[1].innerText="Hello Bhaiwa";
+ document.body.childNodes[5].innerText="Tooooo";
+
+
+window.console.log("Hello2");
+console.dir(window);
+console.dir(window.document);
+console.dir(document.body);
+console.dir(document.head);
+console.dir(document.body.childNodes[1]);
+console.dir();
+
+
+We use DOM for Dynamic Change of HTML Document through the browser console.
+----------------------------------------------------------------------------
+
+                               DOM Manipulation
+                               =================
+Selecting with id
+------------------
+document.getElementById("myId");
+
+Selecting with class
+---------------------
+document.getElementByClassName("myClass");
+
+Selecting with log
+--------------------
+document.getElementByIdTagName("p");
+
+Query Selector 
+----------------
+document.querySelector("myId/myClass/tag"); // returns first element
+document.querySelectorAll("myId/myClass/tag"); // returns a NodeList
+
+// let ele = document.querySelector("p"); // first element returns
+// console.dir(ele);
+
+
+// let allele = document.querySelector("p"); // first element returns
+// console.dir(allele);
+
+
+// let ele = document.querySelectorAll(".myClass"); // all elements
+// console.dir(ele);
+
+// let btn=document.querySelectorAll("myBtn");
+// console.dir(btn);
+
+
+DOM Manipulation Properties :
+------------------------------
+tagName:returns tag for element nodes.
+innerText:returns the text content of the element and all it's children.
+innerHTML:returns the plain text or HTML contents in the element.
+textContent:returns textual content even for hidden elements.
+
+
+//                                      Let's Practice 
+//                                  ======================
+
+//Q1. create a h2 heading element with text - "Hello javaScript" . Append "from Apna College students" to this text using JS.
+let h2 = document.querySelector("h2");
+console.dir(h2.innerText);
+h2.innerText=h2.innerText+" from Apna College Students"; // concatenate
+
+
+
+//Q2. create 3 divs with commnon class name - "box".Access them & add some unique text to each of them .
+
+// Method 1
+/*
+let divs = document.querySelectorAll(".box");
+divs[0].innerText="New Value1";
+divs[1].innerText="New Value2";
+divs[2].innerText="New Value3";
+*/
+
+//Method 2
+let divs = document.querySelectorAll(".box");
+let idx =1;
+for(div of divs){
+    div.innerText=`new unique val ${idx}`;
+    idx++;
+}
+
+
+==============================================================================================
+                                        DOM Part 2
+==============================================================================================
+
+
+DOM Manipulation Attributes :
+-----------------------------
+.getAttribute(attr); // to get the attribute Value
+
+.setAttribute(attr,value); // to set the attribute val the
+
+Style :
+--------
+.node.style
+
+// // console.log("hello");
+// let div = document.querySelector("div");
+// console.log(div);
+
+// let id = div.getAttribute("id");
+// // div.setAttribute("id","Hello");
+// console.log(id);
+
+// let name = div.getAttribute("divName");
+// console.log(name);
+
+
+// let para = document.querySelector("p");
+// console.log(para.getAttribute("class"));
+
+
+// let para = document.querySelector("p");
+// console.log(para.setAttribute("class","newClass"));
+
+
+/*
+let div = document.querySelector("#box1");
+console.log(div);
+div.style.backgroundColor="green";
+div.style.backgroundColor="aqua";
+div.style.fontSize="30px";
+div.innerText="hello";
+*/
+
+
+
+                                    DOM Insert Elements :
+                                    ---------------------
+
+            let el = document.createElement("div");
+
+node.append(el) //adds at the end of node(inside)
+node.prepend(el) // adds at the start of node (inside)
+node.before(el) //adds before the node(outside)
+node.after(el) //adds after the node(outside)
+
+
+                                     DOM Delete Elements :
+                                    -----------------------
+
+node.remove() //removes the node
+
+
+
+                                            //let's Practice 
+                                            //---------------
+
+//Q1. Create a new button element. Give a text "click me",background color of red & text color of white . Insert the button as the first element inside the body tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
