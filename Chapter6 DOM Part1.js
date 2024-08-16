@@ -1,3 +1,5 @@
+
+
 // alert("Hello");
 // alert("Ravi Prakash");
 
@@ -98,6 +100,8 @@ divs[0].innerText="New Value1";
 divs[1].innerText="New Value2";
 divs[2].innerText="New Value3";
 */
+
+
 
 //Method 2
 let divs = document.querySelectorAll(".box");
