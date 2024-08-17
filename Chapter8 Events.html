@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 290px;
+            background-color: black;
+            text-align: center;
+            line-height: 150px;
+            margin-top: 50px;
+            border-radius: 5px;
+            border: 5px double red;
+            color: white;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        .dark{
+            background-color: wheat;
+            color:black;
+        }
+        .light{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: red;">JS Events</h1>
+
+    <!-- <button onclick="console.log(`Button was clicked`); alert(`Hello`);">Click Me</button>
+    
+
+    <button ondblclick="console.log(`Button was clicked 2 times`);">Click me 2 time</button> -->
+
+
+   <!-- Inline Event Handling  -->
+     <!-- <div class="box" onmouseover="console.log(`You are inside div`);" onmouseleave="console.log(`You are inside body section`);">
+        This is a box
+    </div> -->
+
+    
+    <button id="btn1" onclick="console.log(`Hello`);">Click me</button>
+    
+
+    <div class="box">
+        This box is handeled by JS events
+    </div><br><br>
+
+
+    <!-- Event Object Start -->
+    <button id="btn2">
+        Event Object
+    </button><br><br>
+    <!-- Event Object End -->
+
+
+    <!-- Event Listener Start -->
+    <button id="btn3">
+        Event Listener
+    </button><br><br>
+    <!-- Event Listener End -->
+
+
+    <!-- Let's Practice Start -->
+        <button id="mode">Toggle Button</button>
+    <!-- Let's Practice End -->
+
+
+    <script src="Chapter8 Events.js"></script>
+</body>
+</html>

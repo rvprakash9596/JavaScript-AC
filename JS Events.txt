@@ -1,0 +1,151 @@
+                                            Chapter 8 : JS Events
+                                        =============================
+
+Events in JS :
+--------------
+The changes in the state of an object is known as an event.
+Events are fired to notify code of " interesting changes " that may affect code execution.
+
+These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
+
+Each event is represented by an object that is based on the Event interface, and may have additional custom fields and/or functions to provide information about what happened. 
+
+
+.Mouce events (click,double click etc..)
+.Keyboard events (keypress,keyup,keydown)
+.Form events (submit , reset etc..)
+.Print event & many more
+
+                                                        Note :
+                                            ----------------------------
+If we have handeled same HTML document by inline JS and script.JS file then Script.JS file priority will be high rather than inline JS.
+Example :
+---------
+   <button id="btn1" onclick="console.log(`Hello`);">Click me</button>
+If this document have been haldeled by JS file then the priority of JS file will be high.
+
+1. Inline Handle : false
+2. JS Handle  : true
+
+let btn = document.querySelector("#btn1");
+btn.onclick=()=>{
+    console.log("Btn was clicked");
+    let a = 20;
+    console.log("a =",a);
+    a++;
+    console.log(`The value of a become ${a}`);
+}
+
+/*
+btn.onclick=()=>{
+    console.log("Handeler 2 was clicked");
+    let a = 20;
+    console.log("a =",a);
+    a++;
+    console.log(`The value of a become ${a}`);
+}
+*/ //This handler will be overrided
+
+let box = document.querySelector(".box");
+box.onclick=()=>{
+    box.style.backgroundColor="teal";
+    box.style.color="white";
+}
+
+                                                Event Object :
+                                           ==========================
+
+It is a special object that has details about the event.
+All event handlers have access to the Event Object's properties and methods.
+
+
+        node.event=(e)=>{
+            //handle here..
+        }
+
+        e.target
+        e.type
+        e.clientX
+        e.clientY
+
+Example :
+---------
+let btn2 = document.querySelector("#btn2");
+btn2.onclick=(e)=>{
+    console.log(e.type);
+    console.log(e.target);    
+    console.log(e.clientX,e.clientY);
+}
+
+
+
+                                                    Event Listeners
+                                                ==========================
+
+node.addEventListener(event,callback)
+node.removeEventListener(event,callback)
+
+Note :  The callback reference should be same to remove.
+-------
+
+// Event Listeners : Add
+let btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 1");
+});
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 2");
+});
+
+let handler3 = () =>{
+    console.log("Event Listener was clicked 3");
+}
+
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 4");
+});
+
+// Event Listeners : Remove
+// let btn4 = document.querySelector("#btn3");
+btn3.removeEventListener("click",handler3);
+
+
+
+                                                 Let's Practice :
+                                            =======================
+Q1. Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again.
+
+//Method1
+/*
+let modeBtn = document.querySelector("#mode");
+let currMode = "light";//dark
+modeBtn.addEventListener("click",()=>{
+    if(currMode === "light"){
+        currMode = "dark"
+        document.querySelector("body").style.backgroundColor="black";
+    }
+    else{
+        currMode = "light";
+        document.querySelector("body").style.backgroundColor="white";
+    }
+    console.log(currMode);
+});
+*/
+
+//method2
+let modeBtn = document.querySelector("#mode");
+let body = document.querySelector("body");
+let currMode = "light";//dark
+modeBtn.addEventListener("click",()=>{
+    if(currMode === "light"){
+        currMode = "dark"
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }
+    else{
+        currMode = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+    console.log(currMode);
+});
