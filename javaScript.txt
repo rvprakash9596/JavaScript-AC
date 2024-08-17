@@ -1396,4 +1396,420 @@ let factorial=arr.reduce((res,curr)=>{
 console.log("Factorial = ",factorial);
 
 
-================================================================================================
+
+====================================================================================================
+                                    Chapter - 6,7 : DOM Part 1 & 2
+====================================================================================================
+ 
+ 
+                                JavaScript Document Object Model (DOM)
+                            ==============================================
+
+                                        DOM Part 1
+==============================================================================================
+
+The 3 Musketeers of Web Dev :
+-----------------------------
+
+1=> HTML (Structure)
+2=> CSS  (Style)
+3=> JS   (Logic)
+
+
+Starter Code :
+--------------
+<style>  : connects HTML with CSS
+<script> : connects HTML with JavaScript
+
+
+Window Object :
+----------------
+The window object represents an open window in a web browser . It is browser's object ( not JavaScript's ) & is automatically created by browser.
+
+It is a global object with lots of properties & methods.
+
+console.log("Hello1");
+window.console.log("Hello2");
+window.alert("Hii");
+
+                                    -----------------
+                                      What is DOM ??
+                                    -----------------
+When a web page is loaded , the browser creates a DOCUMNET OBJECT MODEL (DOM) of the Page.
+
+----------------------------------------------------------------------------------------------
+                                        window
+                                          |
+                                          |
+                                       document
+                                          |
+                                          |
+                                         html
+                                          |
+                                          |
+                            ---------------------------------
+                            |                               |
+                            |                               |
+                            |                               |
+                          head                             body
+                            |                               |
+                            |                               |
+        -------------------------------             --------------------------
+        |        |          |          |            |                         |
+    meta      meta       title       link         script                     div
+                                                                              |
+                                                            -------------------------------
+                                                            |        |         |          |
+                                                           img       h1        p         div
+----------------------------------------------------------------------------------------------
+
+                
+                
+                html -------->JS--------->object----------->document
+
+
+alert("Hello");
+alert("Ravi Prakash");
+
+
+Window Object
+
+console.log("Hello1");
+window.console.log("Hello2");
+window.alert("Hii");
+
+
+
+                                          DOM
+
+ Touching HTML Code Through JavaScript is called DOM.
+ document.body.style.background="teal";  changing background at runtime in console
+ document.body.style.color="green";
+ document.body.childNodes[1].innerText="Hello Bhaiwa";
+ document.body.childNodes[5].innerText="Tooooo";
+
+
+window.console.log("Hello2");
+console.dir(window);
+console.dir(window.document);
+console.dir(document.body);
+console.dir(document.head);
+console.dir(document.body.childNodes[1]);
+console.dir();
+
+
+We use DOM for Dynamic Change of HTML Document through the browser console.
+----------------------------------------------------------------------------
+
+                               DOM Manipulation
+                               =================
+Selecting with id
+------------------
+document.getElementById("myId");
+
+Selecting with class
+---------------------
+document.getElementByClassName("myClass");
+
+Selecting with log
+--------------------
+document.getElementByIdTagName("p");
+
+Query Selector 
+----------------
+document.querySelector("myId/myClass/tag"); // returns first element
+document.querySelectorAll("myId/myClass/tag"); // returns a NodeList
+
+// let ele = document.querySelector("p"); // first element returns
+// console.dir(ele);
+
+
+// let allele = document.querySelector("p"); // first element returns
+// console.dir(allele);
+
+
+// let ele = document.querySelectorAll(".myClass"); // all elements
+// console.dir(ele);
+
+// let btn=document.querySelectorAll("myBtn");
+// console.dir(btn);
+
+
+DOM Manipulation Properties :
+------------------------------
+tagName:returns tag for element nodes.
+innerText:returns the text content of the element and all it's children.
+innerHTML:returns the plain text or HTML contents in the element.
+textContent:returns textual content even for hidden elements.
+
+
+//                                      Let's Practice 
+//                                  ======================
+
+//Q1. create a h2 heading element with text - "Hello javaScript" . Append "from Apna College students" to this text using JS.
+let h2 = document.querySelector("h2");
+console.dir(h2.innerText);
+h2.innerText=h2.innerText+" from Apna College Students"; // concatenate
+
+
+
+//Q2. create 3 divs with commnon class name - "box".Access them & add some unique text to each of them .
+
+// Method 1
+/*
+let divs = document.querySelectorAll(".box");
+divs[0].innerText="New Value1";
+divs[1].innerText="New Value2";
+divs[2].innerText="New Value3";
+*/
+
+//Method 2
+let divs = document.querySelectorAll(".box");
+let idx =1;
+for(div of divs){
+    div.innerText=`new unique val ${idx}`;
+    idx++;
+}
+
+
+==============================================================================================
+                                        DOM Part 2
+==============================================================================================
+
+
+DOM Manipulation Attributes :
+-----------------------------
+.getAttribute(attr); // to get the attribute Value
+
+.setAttribute(attr,value); // to set the attribute val the
+
+Style :
+--------
+.node.style
+
+// // console.log("hello");
+// let div = document.querySelector("div");
+// console.log(div);
+
+// let id = div.getAttribute("id");
+// // div.setAttribute("id","Hello");
+// console.log(id);
+
+// let name = div.getAttribute("divName");
+// console.log(name);
+
+
+// let para = document.querySelector("p");
+// console.log(para.getAttribute("class"));
+
+
+// let para = document.querySelector("p");
+// console.log(para.setAttribute("class","newClass"));
+
+
+/*
+let div = document.querySelector("#box1");
+console.log(div);
+div.style.backgroundColor="green";
+div.style.backgroundColor="aqua";
+div.style.fontSize="30px";
+div.innerText="hello";
+*/
+
+
+
+                                    DOM Insert Elements :
+                                    ---------------------
+
+            let el = document.createElement("div");
+
+node.append(el) //adds at the end of node(inside)
+node.prepend(el) // adds at the start of node (inside)
+node.before(el) //adds before the node(outside)
+node.after(el) //adds after the node(outside)
+
+
+                                     DOM Delete Elements :
+                                    -----------------------
+
+node.remove() //removes the node
+
+
+
+                                            //let's Practice 
+                                            //---------------
+
+//Q1. Create a new button element. Give a text "click me",background color of red & text color of white . Insert the button as the first element inside the body tag.
+
+let btn = document.createElement("button");
+btn.innerText="click me";
+btn.style.backgroundColor="red";
+btn.style.color="white";
+document.querySelector("body").append(btn);
+console.log(btn);
+
+
+//Create a <p> tag in html , give it a class & some styling. Now create a new class in css and try to append this class to the <p> element. Did you notice , how you overwrite the class name when you add a new one ? solve this problem using classList.
+let para = document.querySelector("p");
+para.setAttribute("class","newClass");
+para.classList.add("newClass");
+para.classList.add(".newClass");
+
+====================================================================================================
+                                    Chapter - 8 : Events in JavaScript
+====================================================================================================
+                                            Chapter 8 : JS Events
+                                        =============================
+
+Events in JS :
+--------------
+The changes in the state of an object is known as an event.
+Events are fired to notify code of " interesting changes " that may affect code execution.
+
+These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
+
+Each event is represented by an object that is based on the Event interface, and may have additional custom fields and/or functions to provide information about what happened. 
+
+
+.Mouce events (click,double click etc..)
+.Keyboard events (keypress,keyup,keydown)
+.Form events (submit , reset etc..)
+.Print event & many more
+
+                                                        Note :
+                                            ----------------------------
+If we have handeled same HTML document by inline JS and script.JS file then Script.JS file priority will be high rather than inline JS.
+Example :
+---------
+   <button id="btn1" onclick="console.log(`Hello`);">Click me</button>
+If this document have been haldeled by JS file then the priority of JS file will be high.
+
+1. Inline Handle : false
+2. JS Handle  : true
+
+let btn = document.querySelector("#btn1");
+btn.onclick=()=>{
+    console.log("Btn was clicked");
+    let a = 20;
+    console.log("a =",a);
+    a++;
+    console.log(`The value of a become ${a}`);
+}
+
+/*
+btn.onclick=()=>{
+    console.log("Handeler 2 was clicked");
+    let a = 20;
+    console.log("a =",a);
+    a++;
+    console.log(`The value of a become ${a}`);
+}
+*/ //This handler will be overrided
+
+let box = document.querySelector(".box");
+box.onclick=()=>{
+    box.style.backgroundColor="teal";
+    box.style.color="white";
+}
+
+                                                Event Object :
+                                           ==========================
+
+It is a special object that has details about the event.
+All event handlers have access to the Event Object's properties and methods.
+
+
+        node.event=(e)=>{
+            //handle here..
+        }
+
+        e.target
+        e.type
+        e.clientX
+        e.clientY
+
+Example :
+---------
+let btn2 = document.querySelector("#btn2");
+btn2.onclick=(e)=>{
+    console.log(e.type);
+    console.log(e.target);    
+    console.log(e.clientX,e.clientY);
+}
+
+
+
+                                                    Event Listeners
+                                                ==========================
+
+node.addEventListener(event,callback)
+node.removeEventListener(event,callback)
+
+Note :  The callback reference should be same to remove.
+-------
+
+// Event Listeners : Add
+let btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 1");
+});
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 2");
+});
+
+let handler3 = () =>{
+    console.log("Event Listener was clicked 3");
+}
+
+btn3.addEventListener("click",()=>{
+    console.log("Event Listener was clicked 4");
+});
+
+// Event Listeners : Remove
+// let btn4 = document.querySelector("#btn3");
+btn3.removeEventListener("click",handler3);
+
+
+
+                                                 Let's Practice :
+                                            =======================
+Q1. Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again.
+
+//Method1
+/*
+let modeBtn = document.querySelector("#mode");
+let currMode = "light";//dark
+modeBtn.addEventListener("click",()=>{
+    if(currMode === "light"){
+        currMode = "dark"
+        document.querySelector("body").style.backgroundColor="black";
+    }
+    else{
+        currMode = "light";
+        document.querySelector("body").style.backgroundColor="white";
+    }
+    console.log(currMode);
+});
+*/
+
+//method2
+let modeBtn = document.querySelector("#mode");
+let body = document.querySelector("body");
+let currMode = "light";//dark
+modeBtn.addEventListener("click",()=>{
+    if(currMode === "light"){
+        currMode = "dark"
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }
+    else{
+        currMode = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+    console.log(currMode);
+});
+
+
+Events Completed....................
+
