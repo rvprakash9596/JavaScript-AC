@@ -9,6 +9,17 @@
 // let marks=[98,82,78,86,81];
 // let info=["Ravi Prakash",86,"KLD"];
 
+
+//1D array
+let arr1=["grapes","banana","orange","papaya"];
+
+//2D array
+let arr2=[
+    ["Apple","Vivo","Redmi"],
+    ["Shirt","Paint","Coat"],
+    ["Pen","Copy","Book"]
+];
+
 // using variables 
 /*
 console.log("JavaScript Arrays");
