@@ -1,0 +1,169 @@
+                                Lecture - 11 Classes & Objects
+                        ==============================================
+
+
+                                        Prototypes in JS :
+                                        -------------------
+A JavaScript object is an entity having state and behavior (properties and method).
+
+Prototype is already have build in each and every JavaScript program.
+
+JS object have a special property called Prototype.
+
+We can set prototype using __proto__
+
+Note :=> If object and prototype have same method , object's method will be used.
+
+
+
+
+//Creating a normal object....
+const student = {
+    fullName:"Ravi Prakash",
+    marks:88,
+    printMarks:function(){
+        console.log("Marks = ",this.marks);// student.marks
+    }
+};
+
+
+// Prototype examples in JS
+
+const employee = {
+    calcTax(){
+        console.log("Tax rate is 10%");
+    },
+    calcTax2 : function (){
+        console.log("Tax Rate is 10 %");
+    }
+};
+
+const karanArjun = {
+    salary :12000,
+    calcTax(){
+        console.log("Tax rate is 20%");
+    }
+};
+karanArjun.__proto__=employee; //karanArjun.employee
+karanArjun.__proto__=student; //karanArjun.printMarks
+
+
+
+
+                                                Classes in JavaScript :
+                                              ---------------------------
+
+Class is a program-code template for creating objects.
+Those objects will have some state (Variables) & some behavior (functions) inside it.
+
+class MyClass{
+        constructor() {...}
+        myMethod() {....}
+}
+let myObj = new MyClass();
+
+Example :
+---------
+
+// Creating Classes
+
+class ToyotaCar{
+    start(){
+        console.log("Start the Car");
+    }
+    stop(){
+        console.log("Stop the Car");
+    }
+    setBrand(brand){
+        this.brandName = brand;
+    }
+}
+
+// Creating Objects
+
+let fortuner = new ToyotaCar();
+fortuner.setBrand = "fortuner";
+let lexus = new ToyotaCar();
+lexus.setBrand("lexus");
+
+
+                                Constructor in JavaScript 
+                        ----------------------------------------
+Constructor is a method inside a class, but it is a special method.
+constructor is a reserve word (keyword).
+
+
+Constructor() method is :                       class MyClass{
+
+. automatically invoked by new                      constructor() {...}
+
+. initializes object                                myMethod()  {...}
+
+                                                }
+
+---------------
+Example 1: ==>
+---------------
+class ToyotaCar{
+    //Creating Constructor
+    constructor() {
+        console.log("Creating New Object..");
+    }
+    start() {
+        console.log("Start the Car..");
+    }
+    stop() {
+        console.log("Stop the Car..");
+    }
+}
+let fortuner = new ToyotaCar();  // constructor
+let lexus = new ToyotaCar();    // constructor
+
+--------------
+Example 2:==>
+--------------
+class company{
+    constructor(name,turnOver){
+        console.log("Creating Company");
+        this.name=name;
+        this.turnOver=turnOver;
+    }
+}
+let cmp1 = new company("HCL",100000);
+console.log(cmp1);
+let cmp2 = new company("TCS",150000);
+console.log(cmp2);
+
+
+                                        Inheritance in JavaScript 
+                                ----------------------------------------
+
+.Inheritance is passing down properties & methods from parent class to child class.
+.extends keyword is used for inheriting parent class properties.
+
+Syntax:
+-------
+
+class Parent{
+        // statements
+}
+class Child extends Parent{
+        // statements
+}
+
+Note :==> If Child & Parent have same method , child's method will be used . [Method Overriding] 
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
