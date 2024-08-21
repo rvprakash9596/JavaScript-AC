@@ -59,6 +59,7 @@ btn.addEventListener("click" ,(evt) =>{
 
 window.addEventListener("load",()=>{
     updateExchangeRate();
+    
 });
 
 // 404 Not Found
