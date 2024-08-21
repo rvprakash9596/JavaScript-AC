@@ -2692,8 +2692,4 @@ Note : HTTP Response header also contain details about the responses , such as c
 
 
 
-
-
-
-
-
+************************************** Thanks ***********************************
