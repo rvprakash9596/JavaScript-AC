@@ -1,0 +1,104 @@
+
+                                Chapter - 13 : Fetch API With Projects
+                    --------------------------------------------------------------
+
+                                API = Application Programming interface
+                                ---------------------------------------
+
+                                            fetch API :
+                                            -----------
+The Fetch API provides an interface for fetching (sending / receiving) resources.
+
+It uses Request and Response objects.
+
+The fetch() method is used to fetch a resource (data).
+
+
+
+let promise = fetch(url,[options])
+
+//Example1
+/*
+const URL = "https://cat-fact.herokuapp.com/facts";
+let promise = fetch(URL);
+console.log(promise);
+*/
+
+
+                                        Understanding Terms :
+                                        ---------------------
+AJAX is Asynchronous JavaScript & XML
+
+JSON is JavaScript Object Notation
+
+JSON = data format as a response as send or give money by using gpay,cash etc..
+
+json() method : returns a second promise that resolves with the result of parsing the response body text as JSON . (Input is JSON , Output is JS Object)
+
+//Example2
+/*
+const URL = "https://cat-fact.herokuapp.com/facts";
+const getFacts = async ()=>{
+    console.log("Getting data ...");
+    let response = await fetch(URL);
+    console.log(response);//JSON Formats
+    // console.log(response.status);
+    let data = await response.json();
+    console.log(data[0].text);
+}
+*/
+
+
+                                    1) Response (JSON)
+                                            |
+                                            |
+                                            *
+                                    2)      JS Object 
+                                             json()
+
+
+//Example3
+/*
+const URL = "https://cat-fact.herokuapp.com/facts";
+const factPara=document.querySelector("#fact");
+const btn = document.querySelector("#btn");
+const getFacts = async ()=>{
+    console.log("Getting data ...");
+    let response = await fetch(URL);
+    console.log(response);//JSON Formats
+    // console.log(response.status);
+    let data = await response.json();
+    factPara.innerText = data[1].text;
+}
+btn.addEventListener("click",getFacts);
+*/
+
+//Example4 promise chaining
+const URL = "https://cat-fact.herokuapp.com/facts";
+const factPara=document.querySelector("#fact");
+const btn = document.querySelector("#btn");
+function getFacts(){
+    fetch(URL)
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        console.log(data);
+        factPara.innerText = data[2].text;
+    });
+}
+btn.addEventListener("click",getFacts);
+
+
+
+                                            Request & Response
+                                        --------------------------
+HTTP Verbs
+
+Response Status Code
+
+Note : HTTP Response header also contain details about the responses , such as content type , HTTP status code etc.
+
+
+
+
