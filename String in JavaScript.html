@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>String in JS</title>
+</head>
+<body>
+    <h1>Strings in JS</h1>
+    <script>
+        // let num=10;
+        // let str = 'Test';
+        // console.log(` ${str} ${num} T ${num} E ${num} S ${num} T`);
+
+
+        // let Student={
+        //     name:"Ravi Prakash",
+        //     branch:"CSE"
+        // }
+        // console.log(`Name = ${Student.name}\n Branch = ${Student.branch}`)
+
+
+/*
+length :returns the number of characters
+toUpperCase()
+toLowerCaes()
+match
+slice()
+replace
+split()
+trim()
+includes
+Template String
+*/
+
+//font-size=kebab case\
+//student_name=snake case
+//studentName=camelCase
+
+//length
+let str1="Hello";
+let size=str1.length;
+console.log(`String is ${str1} and Size =${size}`);
+
+//toUpperCase()
+let str2="ravi prakash";
+console.log(str2.toUpperCase());
+
+//toLowerCase()
+let str3="Ravi Prakash";
+console.log(str3.toLowerCase());
+
+//match
+let str4="@raviprakash4344"
+console.log(str4.match)
+
+//slice(start,end)
+let str5="bansalietlko";
+console.log(str5.slice(2,8)); //nsalie
+
+//replace
+let str6="raviprakash4344 ABCD"
+console.log(str6.replace("raviprakash4344","saurabh"));
+console.log(str6);//raviprakash4344 BACD
+
+//trim()
+let str7=" rvprakash 9596@github "
+console.log(str7.trim());//removes whitespace from start and ending of string
+
+//concat
+let str8="Ravi"
+let str9="Prakash"
+console.log(str8.concat(str9));
+
+//split()
+let text="A B C D";
+let words=text.split("|");
+console.log(text);
+console.log(words);
+
+
+let str10 = 'Ravi Prakash';
+let idx=0;
+for(let char of str10){
+    idx++;
+console.log(`Index ${idx} ${char}`); //s,t,r,i,n,g
+}
+
+</script>
+</body>
+</html>
