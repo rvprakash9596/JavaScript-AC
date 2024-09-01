@@ -649,6 +649,7 @@ console.log("Congratulations! , you entered the right number ...");
 
                                 Strings in JavaScript
                                =======================
+
 // Strings are immutable in JavaScript.
 
 Strings : Strings is a Sequence of Characters which are used to represent the Text.
@@ -722,10 +723,24 @@ String Interpolation : To create Strings by doing substitutions of placeholders.
 
 String Methhods in JavaScript :
 -------------------------------
+
 There are built-in functions to manipulate a string.
 
+length :returns the number of characters
+toUpperCase()
+toLowerCaes()
+match
+slice()
+replace
+split()
+trim()
+includes
+Template String
+
+
+
 .str.toUpperCase()
-.str.toLoverCase()
+.str.toLowerCase()
 .str.trim() // removes whitespace
 .str.slice(start,end?)//returns part of string
 .str1.concat(str2) //joins str2 with str1
