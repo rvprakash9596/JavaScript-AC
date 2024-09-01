@@ -27,9 +27,9 @@ console.log(promise);
 
                                         Understanding Terms :
                                         ---------------------
-AJAX is Asynchronous JavaScript & XML
+AJAX is Asynchronous JavaScript & XML or JSON.
 
-JSON is JavaScript Object Notation
+JSON is JavaScript Object Notation .
 
 JSON = data format as a response as send or give money by using gpay,cash etc..
 
